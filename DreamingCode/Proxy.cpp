@@ -4,12 +4,12 @@ void Proxy::Init(Mode mode) {
 	MODE = mode;
 }
 
-void Proxy::onAttack() {
+void Proxy::onAttack(Hero &from,Hero &to) {
 	if(MODE == Client) {
-		//call ±¾µØÂß¼­²ã
+		GameMode::getGameMode()->onAttack(from,to);
 	}
 	else {
-		//call ÍøÂç²ã
+		//call ï¿½ï¿½ï¿½ï¿½ï¿½
 	}
 }
 
